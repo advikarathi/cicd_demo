@@ -13,11 +13,10 @@ term, present value. return code only wrapped in a Markdown
 code block (triple backticks). Do not add any extra text or 
 explanation outside the code block."""
 
+
 response = client.models.generate_content(
-    model = "gemini-3.1-flash-lite",
-    contents = generate_prompt()
+    model="gemini-3.1-flash-lite", contents=generate_prompt()
 )
 
 print("--- Extracted Code ---")
 print(response.text)
-
